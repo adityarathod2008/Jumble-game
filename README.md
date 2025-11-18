@@ -29,6 +29,7 @@ def game():
    
     print("Your total score is ",point)
 def login():
+
     yes=input("If you want to login type yes else no :")
     if yes=="yes" or "YES" or "Yes":
         nid=input("Enter valid user name :")
@@ -46,4 +47,4 @@ def login():
                     print("Okay, Have a nice day :)")
     if yes=="no":
         print("Okay, Have a nice day :)")
-login()
+ login()
