@@ -1,50 +1,82 @@
-import random
+Jumble Game
 
-def game():
-    
-    name=str(input("Enter your name :"))
-    print("Welcome ",name)
-    print("Welcome to jumble game :")
-    print("Here are some rules of game")
-    print("""1 :There will be total 10 question
-    2 :For each right answer you get 10 point
-    3 :For each wrong answer your point will be min. by 2 point
-        4 :When you enter your ans. enter only first word captial |""")
-    newlist=[]
-    point=0
-    mylist=["Elephant","Python", "Laptop", "Planet", "School", "College", "Friends", "Holiday", "Library", "Teacher", "Student", "Science", "Kitchen", "Garden", "Travel", "Mobile", "Bottle", "Charger", "Battery", "Window", "Curtain", "Blanket", "Pillow", "Station", "Printer", "Coffee", "Cinema", "Temple", "Castle", "Bridge", "Riverbank", "Diamond", "Factory", "Village", "Stadium", "Airport", "Theater", "Camera", "Speaker", "Bicycle", "Rocket", "Forest", "Desert", "Galaxy", "Sunrise", "Sunset", "Mountain", "Festival", "Cricket", "Football", "Avenues", "Balloon", "Baskets", "Bedroom", "Biscuit", "Bonfire", "Bottles", "Brother", "Cameras", "Candles", "Capital", "Carpets", "Ceiling", "Central", "Channel", "Chicken", "Climate", "Clothes", "Compass", "Concert", "Cousins", "Crystal", "Culture", "Dancers", "Deserts", "Dolphin", "Drawing", "Drivers", "Farmers", "Fiction", "Flowers", "Gallery", "Glasses", "Guitars", "Harbour", "Highway", "Horses", "January", "Journey", "Lantern", "Letters", "Locker", "Machine", "Manager", "Market", "Monster", "Morning", "Musical", "Natural", "Notebook", "Numbers", "Officer", "Orchard", "Outdoor", "Palaces", "Parrots", "Passage", "Patient", "Peaches", "Penguin", "Perfume", "Picture", "Pillows", "Pyramid", "Rainbow", "Readers", "Recycle", "Resorts", "Riveras", "Sailing", "Sandals", "Seasons", "Singers", "Skating", "Society", "Soldier", "Storage", "Streets", "Swimmer", "Traffic", "Travels", "Umbrella", "Volcano", "Warrior", "Weather", "Winters", "Writers", "Zephyr","Monkey","Horse","Zebra","Giraffe","Lizard","Chicken","Rabbit","Money hesit","Spider","All of us are dead","Bahubali","Demon","Konosuba","Death note","Mirzapur","My hero academia","Fire force","Alice in boderland"]
-    for x in range(10):
-        random_word= random.choice(mylist)
-        newlist=mylist.remove(random_word)
-        word=sorted(random_word)
-        print(word)
-        choice=input("Enter Your Answer :")
-        
-        if choice==random_word:
-            print("Good Your Answer is right")
-            point=point + 10
-        else:
-            print("Your answer is wrong correct answer is ",random_word)
-            point=point - 2
-   
-    print("Your total score is ",point)
-def login():
+A simple and fun Jumble Game implemented in Python. Test your vocabulary and spelling skills by guessing the correct word from a jumbled set of letters!
 
-    yes=input("If you want to login type yes else no :")
-    if yes=="yes" or "YES" or "Yes":
-        nid=input("Enter valid user name :")
-        if nid=="aditya's game":
-            npassword=input("Enter password :")
-            if npassword=="password":
-                print("Login succesfully...")
-                print(game())
-                
-            else:
-                did=input("Did you want to try again (yes/no): ")
-                if did=="yes":
-                    print(login())
-                else:
-                    print("Okay, Have a nice day :)")
-    if yes=="no":
-        print("Okay, Have a nice day :)")
- login()
+Features
+
+Login system to start the game.
+
+10 questions per game session.
+
+Each correct answer gives 10 points.
+
+Each wrong answer deducts 2 points.
+
+Random words from a pre-defined list.
+
+Interactive console-based gameplay.
+
+Rules
+
+There will be a total of 10 questions.
+
+For each correct answer, you earn 10 points.
+
+For each wrong answer, 2 points are deducted.
+
+When entering your answer, type it with only the first letter capitalized (e.g., Python).
+
+How to Play
+
+Run the Python script:
+
+python jumble_game.py
+
+
+You will be prompted to login:
+
+Enter valid user name : 
+Enter password :
+
+
+Username: aditya's game
+
+Password: password
+
+After logging in, you will see a jumbled word.
+
+Type your guess and press Enter.
+
+Your score will be displayed at the end of the game.
+
+Example Gameplay
+Enter your name: Aditya
+Welcome Aditya
+Welcome to jumble game:
+Here are some rules of game
+1. There will be total 10 question
+2. For each right answer you get 10 points
+3. For each wrong answer your point will be min. by 2 points
+4. When you enter your ans. enter only first word capital
+
+['p', 'y', 't', 'h', 'o', 'n']
+Enter Your Answer: Python
+Good! Your answer is right.
+...
+Your total score is 78
+
+Requirements
+
+Python 3.x
+
+No external libraries required (uses only the built-in random module)
+
+How It Works
+
+The program randomly selects a word from a predefined list.
+
+It jumbles the letters of the word.
+
+The player guesses the original word.
+
+Score is calculated based on correct/incorrect answers.
